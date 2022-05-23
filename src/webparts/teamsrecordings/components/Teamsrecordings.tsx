@@ -1,7 +1,6 @@
 import * as React from "react";
 import styles from "./Teamsrecordings.module.scss";
 import { ITeamsrecordingsProps } from "./ITeamsrecordingsProps";
-import { escape } from "@microsoft/sp-lodash-subset";
 import { MSGraphClient } from "@microsoft/sp-http";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -17,7 +16,6 @@ export default class Teamsrecordings extends React.Component< ITeamsrecordingsPr
         client
           .api("/me/drive/special/recordings/children")
           .get((error, response: any, rawResponse?: any) => {
-            console.log(response.value);
             // handle the response - sets state to value array from the response object.
             this.setState({
               recordings: response.value,
