@@ -1,5 +1,4 @@
 import * as React from "react";
-import { FontSizes } from "@fluentui/theme";
 import styles from "./Teamsrecordings.module.scss";
 
 export default class Header extends React.Component {

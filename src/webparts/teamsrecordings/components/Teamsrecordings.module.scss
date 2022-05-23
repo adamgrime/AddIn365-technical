@@ -19,28 +19,20 @@
   justify-content: center;
 }
 
+.footer {
+  text-decoration: none;
+  font-size: $ms-font-size-20;
+  color: #6264a7;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .meetinginfo {
+  text-decoration: none;
   font-size: $ms-font-size-18;
   color: #6264a7;
   align-items: center;
   text-align: center;
-  text-decoration: none;
-}
-
-.links {
-  a {
-    text-decoration: none;
-    color: #6264a7;
-    color: var(
-      --link
-    ); // note: CSS Custom Properties support is limited to modern browsers only
-
-    &:hover {
-      text-decoration: none;
-      color: "[theme:linkHovered, default: #014446]";
-      color: var(
-        --linkHovered
-      ); // note: CSS Custom Properties support is limited to modern browsers only
-    }
-  }
 }
