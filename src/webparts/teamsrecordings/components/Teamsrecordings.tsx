@@ -18,7 +18,6 @@ export default class Teamsrecordings extends React.Component<
           .get((error, response: any, rawResponse?: any) => {
             // handle the response
             console.log({ response });
-            console.log(response.value)
           });
       });
 
