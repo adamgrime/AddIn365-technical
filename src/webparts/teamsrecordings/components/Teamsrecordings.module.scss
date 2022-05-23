@@ -1,4 +1,4 @@
-@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import "~office-ui-fabric-react/dist/sass/References.scss";
 
 .teamsrecordings {
   overflow: hidden;
@@ -14,13 +14,21 @@
   text-align: center;
 }
 
-.header{
-  background-color: black;
-  
+.header {
+  font-size: $ms-font-size-32;
+  color: #6264a7;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.h1{
-  color: aqua;
+.meetinginfo {
+  font-size: $ms-font-size-18;
+  color: #6264a7;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
 }
 
 .welcomeImage {
@@ -31,13 +39,17 @@
 .links {
   a {
     text-decoration: none;
-    color: "[theme:link, default:#03787c]";
-    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+    color: #6264a7;
+    color: var(
+      --link
+    ); // note: CSS Custom Properties support is limited to modern browsers only
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
       color: "[theme:linkHovered, default: #014446]";
-      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+      color: var(
+        --linkHovered
+      ); // note: CSS Custom Properties support is limited to modern browsers only
     }
   }
 }

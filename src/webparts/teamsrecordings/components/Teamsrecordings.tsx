@@ -3,6 +3,7 @@ import styles from "./Teamsrecordings.module.scss";
 import { ITeamsrecordingsProps } from "./ITeamsrecordingsProps";
 import { escape } from "@microsoft/sp-lodash-subset";
 import { MSGraphClient } from "@microsoft/sp-http";
+import Header from "./Header";
 
 export default class Teamsrecordings extends React.Component<ITeamsrecordingsProps, any>{
   constructor(props) {
@@ -16,7 +17,7 @@ export default class Teamsrecordings extends React.Component<ITeamsrecordingsPro
         client
           .api("/me/drive/special/recordings/children")
           .get((error, response: any, rawResponse?: any) => {
-
+            console.log(response.value)
             // handle the response - sets state to 
             this.setState({
               recordings: response.value
@@ -29,10 +30,18 @@ export default class Teamsrecordings extends React.Component<ITeamsrecordingsPro
 
     return (
       <div>
-        <h1>Recordings</h1>
+        <Header />
         {/* checks to see if anything is held in state, if so it will be rendered */}
+        {/* maps through the recordings array and renders name - retrieves image from WebURL value on recording object*/}
         {this.state?.recordings.map((recording) => {
-          return <p>{recording.name}</p>
+          return (
+            <section className={styles.meetinginfo}>
+              <img width="500" height="300" src={recording.webUrl} />
+              <h3><a href={recording.webUrl} target="_blank"> {recording.name}</a></h3>
+              <p>Date: {recording.createdDateTime.slice(0, 10)}</p>
+              <p>Time: {recording.createdDateTime.slice(11, 16)} </p>
+            </section>
+          );
         })}
       </div>
     );
