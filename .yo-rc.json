@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "teamsrecordings",
+    "libraryId": "b0c7ad2a-fd5a-4d1d-8758-08f0992dc68a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "teamsrecordings",
+    "solutionShortDescription": "teamsrecordings description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

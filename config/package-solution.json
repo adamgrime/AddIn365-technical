@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "teamsrecordings-client-side-solution",
+    "id": "b0c7ad2a-fd5a-4d1d-8758-08f0992dc68a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "teamsrecordings description"
+      },
+      "longDescription": {
+        "default": "teamsrecordings description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+        "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.ReadBasic.All Files.ReadWrite.All"
+      }
+    ],
+    "features": [
+      {
+        "title": "teamsrecordings Feature",
+        "description": "The feature that activates elements of the teamsrecordings solution.",
+        "id": "14efc6cb-0849-437d-89cb-1a80ab0a832e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/teamsrecordings.sppkg"
+  }
+}

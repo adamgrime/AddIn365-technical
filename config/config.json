@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "teamsrecordings-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/teamsrecordings/TeamsrecordingsWebPart.js",
+          "manifest": "./src/webparts/teamsrecordings/TeamsrecordingsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TeamsrecordingsWebPartStrings": "lib/webparts/teamsrecordings/loc/{locale}.js"
+  }
+}
